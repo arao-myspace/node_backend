@@ -1,3 +1,4 @@
-module.exports = function (req, res) {
+module.exports = { 
+    homepage (req, res) {
     res.send('Server works :)');    
-}
+}}
