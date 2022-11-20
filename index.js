@@ -3,6 +3,7 @@ const app = express();
 const { port } = require('./config');
 const apiRouter = require('./routes/api');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 //include database initialization
 require('./db/mongoose'); //after that script execution
@@ -10,6 +11,9 @@ require('./db/mongoose'); //after that script execution
 
 //parser; Content-type: application/json
 app.use(bodyParser.json());
+
+//CORS enable
+app.use(cors());
 
 //routes 
 //tell the app to set the app prefix before routes
